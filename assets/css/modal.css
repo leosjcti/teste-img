@@ -1,0 +1,141 @@
+.modal-window {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.25);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+  }
+  .modal-window:target {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .modal-window > div {
+    width: 900px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    padding: 2em;
+    background: #ffffff;
+    color: #333333;
+  }
+  .modal-window header {
+    font-weight: bold;
+  }
+  .modal-window h1 {
+    font-size: 150%;
+    margin: 0 0 15px;
+    color: #333333;
+  }
+  
+  .modal-close {
+    color: #aaa;
+    line-height: 50px;
+    font-size: 80%;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 70px;
+    text-decoration: none;
+  }
+  .modal-close:hover {
+    color: #000;
+  }  
+
+
+  /* Form */
+  input[type=text] {
+    width: 100%;
+    padding: 8px 20px;
+  }
+
+  .grid-modal {
+    display: grid;
+    grid-template-columns: 250px 320px 200px 290px;
+    grid-template-rows: auto 5px auto 5px auto;
+    border-bottom:1px solid #ccc;
+  }
+
+  .modal-posicao-1 {
+    grid-column: 1;
+    font-size: 12px;
+    grid-row: 1;
+    margin-top: 10px;
+  }
+
+  .modal-posicao-2 {
+    grid-column: 2;
+    font-size: 12px;
+    grid-row: 1;
+    margin-top: 10px;
+  }
+
+  .modal-posicao-3 {
+    grid-column: 3;
+    font-size: 12px;
+    grid-row: 1;
+    background-color: blue;
+    color: #ffffff;    
+    margin-top: 10px;
+    width: 80px;
+    padding: 2px;
+  }
+
+  .modal-posicao-3 a {
+    color: #FFF;
+    text-decoration:none; 
+  }
+
+  /* parte 2 do modal*/
+  .grid-modal2 {
+    display: grid;
+    background-color: rgb(252, 252, 252);
+    grid-template-columns: 200px 430px 250px 290px;
+    grid-template-rows: auto 5px auto 5px auto;
+  }
+
+  .modal2-posicao-1 {
+    grid-column: 1;
+    font-size: 12px;
+    grid-row: 1;
+    margin-top: 5px;
+    word-spacing: 20px;
+  }
+
+  .modal2-posicao-2 {
+    grid-column: 2;
+    font-size: 12px;
+    grid-row: 1;
+    margin-top: 5px;
+    word-spacing: 20px;
+  }
+
+  .modal2-posicao-3 {
+    grid-column: 1;
+    font-size: 12px;
+    grid-row: 2;
+    margin-top: 10px;
+    word-spacing: 20px;
+  }
+
+  .modal2-posicao-4 {
+    grid-column: 2;
+    font-size: 12px;
+    grid-row: 2;
+    margin-top: 10px;
+    word-spacing: 20px;
+  }
+
+  .modal2-posicao-5 {
+    grid-column: 3;
+    font-size: 10px;
+    grid-row: 1;
+    margin-top: 5px;
+  }

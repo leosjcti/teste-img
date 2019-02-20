@@ -1,0 +1,153 @@
+<html>
+
+<head>
+    <title>Menu Dropdown - Linha de Código</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/template.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/menu.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/drag.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/modal.css" />
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="assets/js/util.js"></script>
+
+</head>
+
+<body>
+
+
+    <header>
+        <div class="headerPrincipal">
+            <div class="gridLogo">
+                <img src="assets/images/azure.PNG" />
+                <h2>Azure <span class="devops">DevOps</span></h2>
+            </div>
+            <div class="gridHeader1">
+                <h3>imagem-soluoes / SIDEC / Sprints</h3>
+            </div>
+            <div class="gridHeader2"><input type="text" placeholder="Search" name="search"></div>
+        </div>
+    </header>
+
+    <section>
+        <nav>
+            <div>
+                <ul class="menu-sanfona">
+                    <li tabindex="0"> <span><b>SIDEC</b></span></li>
+                    <li tabindex="1"><img src="assets/images/overview.png" class="menu" /><span>Overview</span></li>
+                    <li tabindex="2"><img src="assets/images/boards.png" class="menu" /> <span>Boards</span>
+                        <ul>
+                            <li><span>Work Itens</span></li>
+                            <li><span>Boards</span></li>
+                            <li><span>Backlogs</span></li>
+                            <li><span>Sprints</span></li>
+                            <li><span>Queries</span></li>
+                        </ul>
+                    </li>
+                    <li tabindex="2"><img src="assets/images/repos.png" class="menu" /> <span>Repos</span></li>
+                    <li tabindex="3"><img src="assets/images/pipelines.png" class="menu" /> <span>Pipelines</span></li>
+                    <li tabindex="4"><img src="assets/images/tests.png" class="menu" /> <span>Test Plans</span></li>
+                    <li tabindex="5"><img src="assets/images/artifacts.png" class="menu" /> <span>Artifacrs</span></li>
+                </ul>
+            </div>
+
+
+        </nav>
+
+        <article>
+
+            <div class="actions">
+                <img src="assets/images/sprint.PNG" style="padding: 0px;" />
+                <div class="action">SIDEC Team</div>
+            </div>
+
+
+            <div class="actions" style="border-bottom:1px solid #ccc; margin-bottom: 20px">
+                <div class="action">TaskBoard</div>
+                <div class="action">Backlog</div>
+                <div class="action">Capacity</div>
+                <div class="action">|</div>
+                <div><a href="#open-modal"> New Work Item</a></div>
+            </div>
+
+            <section class="grid-1">
+                <div class="">Collapse all</div>
+                <div class="">New</div>
+                <div class="">Active</div>
+                <div class="">Closed</div>
+            </section>
+
+            <section class="grid-1">
+
+                <div class="item-1" ondrop="drop(event)" ondragover="allowDrop(event)" id="item1">
+                    <div id="novoQuadro" class="drag" style="display: none; border-left: 4px solid red;"
+                        draggable="true" ondragstart="drag(event)"></div>
+                </div>
+
+
+                <div class="item-2" ondrop="drop(event)" ondragover="allowDrop(event)" id="item2"></div>
+                <div class="item-3" ondrop="drop(event)" ondragover="allowDrop(event)" id="item3"></div>
+                <div class="item-4" ondrop="drop(event)" ondragover="allowDrop(event)" id="item4">
+                    <div draggable="true" ondragstart="drag(event)" class="drag" id="drag">
+                        1141 Nova Atividade
+                    </div>
+                </div>
+
+                <div class="item-5" ondrop="drop(event)" ondragover="allowDrop(event)" id="item5">
+                    <div draggable="true" ondragstart="drag(event)" class="drag" id="drag2">
+                        1136 Deixar fixo as cores do inbox
+                    </div>
+                </div>
+
+
+                <div class="item-6" ondrop="drop(event)" ondragover="allowDrop(event)" id="item6"></div>
+                <div class="item-7" ondrop="drop(event)" ondragover="allowDrop(event)" id="item7"></div>
+                <div class="item-8" ondrop="drop(event)" ondragover="allowDrop(event)" id="item8"></div>
+            </section>
+
+
+        </article>
+    </section>
+
+
+    <!-- 
+        ****************
+        ******Modal***** 
+        ****************
+    -->
+    <div id="open-modal" class="modal-window">
+        <div>
+            <a href="#" title="Close" class="modal-close">Close</a>
+            <h1></h1>
+            <h4 style="float: left"></h4><input type="text" name="nameTask" id="nameTask" />
+
+            <div class="grid-modal">
+                <div class="modal-posicao-1">Cassia Salles Gomes Rezende</div>
+                <div class="modal-posicao-2">0 comments</div>
+                <a href="#" onclick="showAndHide('novoQuadro')"><div class="modal-posicao-3">Save & Close</a>
+            </div>
+        </div>
+
+        <div class="grid-modal2">
+            <span class="modal2-posicao-1">State</span><span class="modal2-posicao-1"
+                style="margin-left: 65px">New</span>
+            <span class="modal2-posicao-2">Area</span><span class="modal2-posicao-2"
+                style="margin-left: 65px">SIDEC</span>
+
+            <span class="modal2-posicao-3">Reason</span><span class="modal2-posicao-3"
+                style="margin-left: 65px">New</span>
+            <span class="modal2-posicao-4">Iteration</span><span class="modal2-posicao-4"
+                style="margin-left: 65px">SIDEC\Sprint1</span>
+
+            <span class="modal2-posicao-5">Update by Mateus de Pontes Moraes 4 hours ago</span>
+
+        </div>
+
+        <div style="padding-top: 40px">
+            Continuação da Conteúdo ...
+        </div>
+
+    </div>
+</body>
+
+</html>
